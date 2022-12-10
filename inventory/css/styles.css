@@ -1,0 +1,85 @@
+
+.header1 {  
+  padding: 5px;
+  text-align: center;
+  background: #2b5048;
+  color: white;
+  font-size: 20px;
+  }
+
+.header2 {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; 
+  text-align: center;
+  background: #2b5048;
+  color: white;
+  font-size: 20px;
+}
+
+
+.hide-container{
+  display:none
+}
+.submit-btn {
+  background-color: #2b5048;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-family: 'Roboto', sans-serif;
+  padding: 30px;
+  text-transform: uppercase
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+input[type='text'],
+input[type='number']
+
+ {
+  text-align: center;
+  width: 200px;
+  padding: 5px 2px;
+  margin: 10px 2px;
+  display: inline-block;
+  border: 5 #2b5048;
+  border-radius: 5px;
+  box-sizing: border-box; 
+}
+
+.totalQ {
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2b5048;
+    color: white;
+    text-align: center;
+  }
+
+  @media (max-width:500px){
+  /* which element need to be change */
+  }
+
+  
