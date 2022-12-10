@@ -18,72 +18,73 @@
 		<div class="header2" align="center">
 			<h1 class="header3">Inventory</h1>
 		</div>
+
 		<div class="container">
 			<h1 class="header4">Inventory Management System</h1>
-			
-
-				<div id="wrapper">
-					<table cellspacing=2 cellpadding=10 class="center" id="data_table" border=1>
-						<thead>
-							<tr>
-								<th>Brand</th>
-								<th>Model</th>
-								<th>SN</th>
-								<th>Quantity</th>
-								<th>Price</th>
-								<th>Modify</th>
-							</tr>
-						</thead>
-
-						<tbody>
-							<tr id="row1" >
-								<td id="brand_row1">Apple</td>
-								<td id="model_row1">Macbook Pro 2022</td>
-								<td id="serial_row1">ASDJK12314AJS</td>
-								<td id="quantity_row1">12</td>
-								<td id="price_row1">2999 $</td>
-								<td>
-									<input type="button" id="edit_button1" value="Edit" class="edit"
-										onclick="edit_row('1')">
-									<input type="button" value="Delete" class="delete" onclick="delete_row('1')">
-								</td>
-							</tr> 
-
-							<tr>
-								<td><input type="text" id="new_brand"></td>
-								<td><input type="text" id="new_model"></td>
-								<td><input type="text" id="new_serial"></td>
-								<td><input type="number" id="new_quantity"></td>
-								<td><input type="number" id="new_price"></td>
-
-								<td><input type="button" class="add" onclick="add_row();" value="Add New Stock"></td>
-							</tr>
-					    </tbody>
-
-				
-					</table> 
-				</div>
-			
-			<br><br><br>
-
 			<div id="totalQuantityDiv" align="center">
-				<Label for ="totalQuantity"><b>Total Quantities:  </b></Label>
-				<input class="totalQ" type="" id = "totalQuantity" readonly="true" >
+				<Label for="totalQuantity"><b>Total Quantities: </b></Label>
+				<input class="totalQ" type="" id="totalQuantity" readonly="true">
+
+			</div>
+			<br>
+
+			<div id="wrapper">
+				<table cellspacing=2 cellpadding=10 class="center" id="data_table" border=1>
+					<thead>
+						<tr>
+							<th>Brand</th>
+							<th>Model</th>
+							<th>SN</th>
+							<th>Quantity</th>
+							<th>Price</th>
+							<th>Modify</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr id="row1">
+							<td id="brand_row1">Apple</td>
+							<td id="model_row1">Macbook Pro 2022</td>
+							<td id="serial_row1">ASDJK12314AJS</td>
+							<td id="quantity_row1">12</td>
+							<td id="price_row1">2999 $</td>
+							<td>
+								<input type="button" id="edit_button1" value="Edit" class="edit"
+									onclick="edit_row('1')">
+								<input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+							</td>
+						</tr>
+
+						<tr>
+							<td><input type="text" id="new_brand"></td>
+							<td><input type="text" id="new_model"></td>
+							<td><input type="text" id="new_serial"></td>
+							<td><input type="number" id="new_quantity"></td>
+							<td><input type="number" id="new_price"></td>
+
+							<td><input type="button" class="add" onclick="add_row();" value="Add New Stock"></td>
+						</tr>
+					</tbody>
+
+
+				</table>
+			</div>
+
 
 		</div>
-	</div>
-	<script src="script/script.js"></script>
+		<script src="script/script.js"></script>
 
-	<pre>
+		<pre>
 
 		<!--This is Footer--> 
 				
 		</pre>
 
 
-	<footer>
-		<p>© 2022 Duc Thinh Nguyen 2213062 | Chatnatee Khamlue 2210113 | Tinku Tinku 2231091 | Ngoc Tuyen Pham 2230177</p>
-	</footer>
+		<footer>
+			<p>© 2022 Duc Thinh Nguyen 2213062 | Chatnatee Khamlue 2210113 | Tinku Tinku 2231091 | Ngoc Tuyen Pham
+				2230177</p>
+		</footer>
 
 </body>
 
