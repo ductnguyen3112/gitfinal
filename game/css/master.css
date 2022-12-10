@@ -258,7 +258,7 @@
 
 .draw {
   float: left;
-  width: 50%;
+  width: 49%;
   height: 25px;
   background: pink;
   border-radius: 10px;
@@ -269,7 +269,7 @@
 .newscore {
   
   float: right;
-  width: 50%;
+  width: 49%;
   height: 25px;
   background: rgb(220, 73, 98);
   border-radius: 10px;
@@ -311,9 +311,10 @@
 }
 
 .score1 {
+  
   min-width: fit-content;
   float: left;
-  width: 50%;
+  width: 49%;
   height: 25px;
   background-color: rgb(140, 190, 213);
   border-radius: 10px;
@@ -321,9 +322,10 @@
 }
 
 .score2 {
+  
   min-width: fit-content;
   float: right;
-  width: 50%;
+  width: 49%;
   height: 25px;
   background-color: rgb(6, 121, 174);
   border-radius: 10px;

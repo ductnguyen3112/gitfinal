@@ -1,6 +1,6 @@
 "use strict";
-var barPoint = 50;
-var barPoint2 = 50;
+var barPoint = 49;
+var barPoint2 = 49;
 window.addEventListener('load', app);
 var mode = 0;
 var Player01 = 'O';
@@ -274,7 +274,7 @@ function isWinner() {
           <div class="u-r-winner">You are our winner!</div>
         `;
 
-        barPoint = barPoint - 50 / 6;
+        barPoint = barPoint - 49 / 6;
         console.log(barPoint + '%');
         document.getElementById("score2").style.width = `${barPoint}%`;
         winner = true;
@@ -295,7 +295,7 @@ function isWinner() {
           <div class="u-r-winner">You Can't Win This Game!</div>
          `;
         }
-        barPoint2 = barPoint2 - 50 / 6;
+        barPoint2 = barPoint2 - 49 / 6;
         console.log(barPoint2 + '%');
         document.getElementById("score1").style.width = `${barPoint2}%`;
         scoreboard.player2++;
@@ -347,8 +347,8 @@ function scoredBoard() {
     barPoint = 50;
     barPoint2 = 50;
 
-    document.getElementById("score1").style.width = '50%'
-    document.getElementById("score2").style.width = '50%'
+    document.getElementById("score1").style.width = '49%'
+    document.getElementById("score2").style.width = '49%'
 
 
   }
@@ -364,7 +364,7 @@ function scoredBoard() {
   draw.innerHTML = `
     <p>Draw: ${scoreboard.draw}</p>
     `;
-    
+
   newscore.innerHTML = `
     <p>Game: ${scoreboard.player1 + scoreboard.player2 + scoreboard.draw}</p>
     `;
