@@ -1,10 +1,10 @@
 "use strict";
-var barPoint = 49;
-var barPoint2 = 49;
+var barPoint = 49; 
+var barPoint2 = 49; // set health bar point
 window.addEventListener('load', app);
-var mode = 0;
-var Player01 = 'O';
-var Player02 = 'X';
+var mode = 0; // mode1(Player vs Player) ; mode2 (Player vs Computer)
+var Player01 = 'O'; // Default value of Player01
+var Player02 = 'X'; // Default value of Player02
 var gameBoard = ['', '', '', '', '', '', '', '', ''];
 let winner = false;
 let gameOver = false;
@@ -114,18 +114,17 @@ function app() {
   const addPvCForm = document.getElementById('pvp-form');
   addPvCForm.addEventListener('submit', addPvC);
 
-
+// calling Clear Board
   let replayButton = document.querySelector('.replay-btn');
   replayButton.addEventListener('click', resetBoard);
 
-
+  //Return to Choose Mode aka Reload
   let backButton = document.querySelector('.back-btn');
   backButton.addEventListener('click', backMode);
 
 }
 
 function backMode() {
-
   location.reload();
 }
 
@@ -157,7 +156,7 @@ function addPvC(square) {
     alert('You Must Enter a Name for Each Field');
     return;
   }
-
+  // Contructing Game for PVC
   const pvcContainer = document.querySelector('.enter-pvc');
   const boardPVC = document.querySelector('.board__main');
   pvcContainer.classList.add('hide-container');
@@ -202,7 +201,7 @@ function buildBoard() {
 
   } else {
     //Build Board For PVC
-    alert('mode PVC start')
+    //alert('mode PVC start')
     let resetContainer = document.querySelector('.reset');
     resetContainer.classList.remove('reset--hidden');
 
@@ -273,7 +272,7 @@ function isWinner() {
           <div class="congratulations">Congratulations ${playerX.name}</div>
           <div class="u-r-winner">You are our winner!</div>
         `;
-
+        // Set Health Value of Player 2 if Win
         barPoint = barPoint - 49 / 6;
         console.log(barPoint + '%');
         document.getElementById("score2").style.width = `${barPoint}%`;
@@ -295,6 +294,7 @@ function isWinner() {
           <div class="u-r-winner">You Can't Win This Game!</div>
          `;
         }
+        // Set Health Value of Player 1 if Win
         barPoint2 = barPoint2 - 49 / 6;
         console.log(barPoint2 + '%');
         document.getElementById("score1").style.width = `${barPoint2}%`;
@@ -323,7 +323,7 @@ function drawCheck() {
     <div class="congratulations">Game Is Tie</div>
     <div class="u-r-winner">Resetting Board....!</div>
   `;
-      scoreboard.draw++;
+      scoreboard.draw++; 
       scoredBoard()
       setTimeout(() => resetBoard(), 1000)
     }
@@ -346,7 +346,7 @@ function scoredBoard() {
     scoreboard.newscore = 0;
     barPoint = 50;
     barPoint2 = 50;
-
+    //reset All Score Board and Health Point
     document.getElementById("score1").style.width = '49%'
     document.getElementById("score2").style.width = '49%'
 
@@ -356,7 +356,7 @@ function scoredBoard() {
   score1.innerHTML = `
     <p>${playerX.name}: ${scoreboard.player1}</p>
     `;
-
+    // insert to Score Board
   score2.innerHTML = `
     <p>${playerY.name}: ${scoreboard.player2}</p>
     `;

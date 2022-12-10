@@ -19,7 +19,7 @@
   <div>
     <h1 class="header">Tic Tac Toe</h1>
   </div>
-
+  <br>
   <div class="landingpage" align="center">
     <h1> Choose Game Mode</h1>
     <input type="submit" class="submit-btn" value="Player vs Player" onclick="modePVP()" />
@@ -43,6 +43,7 @@
       </div>
 
       <input type="submit" class="submit-btn" value="Start Game" />
+      <input type="submit" class="back-btn" value="Back" onclick="backMode()" />
     </form>
   </div>
 
@@ -60,28 +61,30 @@
         <input type="checkbox" class="radioCheck" name="checkboxes" id="c01" value="X" onclick="check(this);" /> X
         <input type="checkbox" class="radioCheck" name="checkboxes" id="c02" value="O" onclick="check(this);" /> O
       </div>
-      <input type="submit" class="submit-btn" value="Start Game" />
+      <input type="submit" class="submit-btn" value="Start Game" onclick="modePVC()"/>
+      <input type="submit" class="back-btn" value="Back" onclick="backMode()"/>
+
     </form>
   </div>
 
   <div class="board__main hide-container">
     <div id="score" class="score">
-    <div id="myProgress" class="myProgress">
-      <div id="score1" class="score1">
-        <p>Player 1 : 0</p>
+      <div id="myProgress" class="myProgress">
+        <div id="score1" class="score1">
+          <p>Player 1 : 0</p>
+        </div>
+        <div id="score2" class="score2">
+          <p>Player 2 : 0</p>
+        </div>
       </div>
-      <div id="score2" class="score2">
-        <p>Player 2 : 0</p>
-      </div>
-    </div>
-    <div id="myProgress2" class="myProgress2">
-    <div id="draw" class="draw">    
-    </div>
+      <div id="myProgress2" class="myProgress2">
+        <div id="draw" class="draw">
+        </div>
 
-    <div id="newscore" class="newscore">
+        <div id="newscore" class="newscore">
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
     <div class="board___player-turn"></div>
 
