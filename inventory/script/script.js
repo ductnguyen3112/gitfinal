@@ -117,7 +117,7 @@ function totalStocks() {
     if (sum > 100) {
         total = sum;
     }else{
-        document.getElementById("totalQuantity").value = Number.parseInt(sum);
+        document.getElementById("totalQuantity").value = Number.parseInt(sum) + "/100";
     }
 }
 function exit() {
