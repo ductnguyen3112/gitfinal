@@ -122,5 +122,4 @@ function totalStocks() {
 }
 function exit() {
     location.reload();
-    return
 }
