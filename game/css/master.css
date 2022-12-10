@@ -367,3 +367,13 @@
   border-radius: 10px;
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
 }
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #1087e1;
+  color: white;
+  text-align: center;
+}
