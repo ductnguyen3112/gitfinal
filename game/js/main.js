@@ -364,6 +364,7 @@ function scoredBoard() {
   draw.innerHTML = `
     <p>Draw: ${scoreboard.draw}</p>
     `;
+    
   newscore.innerHTML = `
     <p>Game: ${scoreboard.player1 + scoreboard.player2 + scoreboard.draw}</p>
     `;
