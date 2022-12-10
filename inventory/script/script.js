@@ -27,7 +27,7 @@ function save_row(no) {
     var price_val = document.getElementById("price_text" + no).value;
     // check blank space
     if (brand_val == "" || model_val == "" || serial_val == "" || quantity_val == "" || price_val == "") {
-        alert("Please do not leave any blank space")
+        alert("Please Check your Input")
         return
     }
     document.getElementById("brand_row" + no).innerHTML = brand_val;
@@ -60,7 +60,7 @@ function add_row() //Call function checkPassword
         var new_price = document.getElementById("new_price").value;
         //check blank space
         if (new_brand == "" || new_model == "" || new_serial == "" || new_quantity == "" || new_price == "") {
-            alert("Please do not leave any blank space")
+            alert("Please Check your Input")
             return
         }
         var table = document.getElementById("data_table");
@@ -117,7 +117,7 @@ function totalStocks() {
     if (sum > 100) {
         total = sum;
     }else{
-        document.getElementById("totalQuantity").value = Number.parseInt(sum) + "/100";
+        document.getElementById("totalQuantity").value = sum + "/100";
     }
 }
 function exit() {
