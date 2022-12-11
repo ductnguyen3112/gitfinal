@@ -60,7 +60,7 @@ tr:nth-of-type(odd) {
   background: #eee; 
 }
 th { 
-  background: #333; 
+  background: #2b5048;
   color: white; 
   font-weight: bold; 
 }
