@@ -23,7 +23,7 @@ const winningSequences = [
   [2, 5, 8],
   [0, 4, 8],
   [2, 4, 6]
-];
+]; 
 //SCOREBOARD
 const scoreboard = {
   player1: 0,
@@ -82,8 +82,6 @@ function modePVP() {
   pvpFormContainer.classList.add('hide-container');
   boardPVP.classList.remove('hide-container');
 
-
-
 }
 
 function modePVC() {
@@ -99,7 +97,7 @@ function modePVC() {
 
   let box = document.querySelector('.score').firstElementChild;
 
-  console.log(box);
+  //console.log(box);
 }
 
 
@@ -274,7 +272,7 @@ function isWinner() {
         `;
         // Set Health Value of Player 2 if Win
         barPoint = barPoint - 49 / 6;
-        console.log(barPoint + '%');
+        //console.log(barPoint + '%');
         document.getElementById("score2").style.width = `${barPoint}%`;
         winner = true;
         scoreboard.player1++;
@@ -344,8 +342,8 @@ function scoredBoard() {
     scoreboard.player2 = 0;
     scoreboard.draw = 0;
     scoreboard.newscore = 0;
-    barPoint = 50;
-    barPoint2 = 50;
+    barPoint = 49;
+    barPoint2 = 49;
     //reset All Score Board and Health Point
     document.getElementById("score1").style.width = '49%'
     document.getElementById("score2").style.width = '49%'
@@ -501,6 +499,7 @@ function turns(squareId, player) {
 
 
 function pvcTie() {
+  //check for Tie of PVC mode
   let currentPlayerText = document.querySelector('.board___player-turn');
   if (emptySquares().length == 0) {
 
@@ -546,7 +545,7 @@ function minimax(newBoard, player) {
 
   /// MiniMax algorithm AI Calculates Best Move By Go Through All Win Loses Scenerio
   var availSpots = emptySquares();
-  //console.log(newBoard)
+  console.log(newBoard)
 
   if (calculateWin(newBoard, Player01)) {
     return { score: -10 };
