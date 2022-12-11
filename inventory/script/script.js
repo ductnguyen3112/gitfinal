@@ -1,6 +1,8 @@
 "use strict";
 var total = 0;
+var login_attempts = 0;
 function edit_row(no) {
+    // Edit Row
     document.getElementById("edit_button" + no).style.display = "none";
     document.getElementById("save_button" + no).style.display = "block";
     var brand = document.getElementById("brand_row" + no);
@@ -20,6 +22,8 @@ function edit_row(no) {
     price.innerHTML = "<input type='number' id='price_text" + no + "' value='" + price_data + " $'>";
 }
 function save_row(no) {
+
+    // Save after Edit
     var brand_val = document.getElementById("brand_text" + no).value;
     var model_val = document.getElementById("model_text" + no).value;
     var serial_val = document.getElementById("serial_text" + no).value;
@@ -30,6 +34,8 @@ function save_row(no) {
         alert("Please Check your Input")
         return
     }
+
+    //Insert Value to Board
     document.getElementById("brand_row" + no).innerHTML = brand_val;
     document.getElementById("model_row" + no).innerHTML = model_val;
     document.getElementById("serial_row" + no).innerHTML = serial_val;
@@ -38,17 +44,18 @@ function save_row(no) {
     document.getElementById("edit_button" + no).style.display = "block";
     document.getElementById("save_button" + no).style.display = "none";
     console.log(quantity_val);
-    totalStocks();
-    if (total > 100){
+    totalStocks(); // Change  Totals Stocks Value
+    if (total > 100){ 
         alert("Total Quantities should not be more than 100");
         total = 0;
         totalStocks();
-        edit_row(no);
+        edit_row(no); // Return to Edit
     }
 }
 function delete_row(no) {
+
     document.getElementById("row" + no + "").outerHTML = "";
-    totalStocks()
+    totalStocks()// relist the total
 }
 function add_row() //Call function checkPassword
 {
@@ -65,18 +72,20 @@ function add_row() //Call function checkPassword
         }
         var table = document.getElementById("data_table");
         var table_len = (table.rows.length) - 1;
+        // print value on the table
         var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='brand_row" + table_len + "'>" + new_brand + "</td><td id='model_row" + table_len + "'>" + new_model + "</td><td id='serial_row" + table_len + "'>" + new_serial + "</td><td id='quantity_row" + table_len + "'>" + new_quantity + "</td><td id='price_row" + table_len + "'>" + new_price + " $ </td><td><input type='button' id='edit_button" + table_len + "' value='Edit' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len + "' value='Save' class='save' onclick='save_row(" + table_len + ")'> <input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
     } else {
         return
     }
     totalStocks();
-    console.log(total)
+    //console.log(total)
     if (total > 100) {
         alert("Total Quantities should not be more than 100");
         totalStocks();
         delete_row(table_len);
         total = 0;
     }else{
+        // add the input
         document.getElementById("new_brand").value = "";
         document.getElementById("new_model").value = "";
         document.getElementById("new_serial").value = "";
@@ -86,12 +95,15 @@ function add_row() //Call function checkPassword
 }
 function startManage() {
     const startFormContainer = document.querySelector('.welcome');
-    startFormContainer.classList.add('hide-container');
-    const inventoryMain = document.querySelector('.main-inventory');
+    startFormContainer.classList.add('hide-container'); //hiding firstpage
+    
+    const inventoryMain = document.querySelector('.main-inventory'); //show inventory 
     inventoryMain.classList.remove('hide-container');
     totalStocks();
 }
-var login_attempts = 0;
+
+
+
 function checkPassword() {
     var checkpass = prompt("Enter your password to edit the inventory");
     if (checkpass == 'password') { // check pass
@@ -107,6 +119,8 @@ function checkPassword() {
     }
 }
 function totalStocks() {
+
+    //Calculate total stocks on Chart
     var table=document.getElementById("data_table");
     var table_len=(table.rows.length)-1;
     var sum = 0;
