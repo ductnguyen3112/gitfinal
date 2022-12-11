@@ -120,6 +120,13 @@ function totalStocks() {
         document.getElementById("totalQuantity").value = sum + "/100";
     }
 }
+
 function exit() {
-    location.reload();
+
+    if (confirm("Are you sure to exit this page?") == true) {
+        location.reload();
+      } else {
+        return
+      }
+    
 }

@@ -29,9 +29,12 @@
   font-size: 20px;
 }
 .exit-btn {
+  min-width: fit-content;
   background-color: #2b5048;
   color: white;
   font-family: 'Roboto', sans-serif;
+  border-radius: 10px;
+  
   font-size: 20px;
 }
 h1 {
